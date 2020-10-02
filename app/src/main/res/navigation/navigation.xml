@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.android.tugasfragmentqomar.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_namaFragment"
+            app:destination="@+id/namaFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.android.tugasfragmentqomar.AboutFragment"
+        android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/namaFragment"
+        android:name="com.example.android.tugasfragmentqomar.NamaFragment"
+        android:label="NamaFragment" >
+        <action
+            android:id="@+id/action_namaFragment_to_usiaFragment"
+            app:destination="@id/usiaFragment"
+            app:popUpTo="@+id/homeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/usiaFragment"
+        android:name="com.example.android.tugasfragmentqomar.UsiaFragment"
+        android:label="UsiaFragment" >
+        <action
+            android:id="@+id/action_usiaFragment_to_jenisKelaminFragment"
+            app:destination="@id/jenisKelaminFragment"
+            app:popUpTo="@+id/homeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/jenisKelaminFragment"
+        android:name="com.example.android.tugasfragmentqomar.JenisKelaminFragment"
+        android:label="JenisKelaminFragment" >
+        <action
+            android:id="@+id/action_jenisKelaminFragment_to_hasilFragment"
+            app:destination="@id/hasilFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/hasilFragment"
+        android:name="com.example.android.tugasfragmentqomar.HasilFragment"
+        android:label="HasilFragment" >
+        <action
+            android:id="@+id/action_hasilFragment_to_jenisKelaminFragment"
+            app:destination="@id/jenisKelaminFragment"
+            app:popUpTo="@+id/homeFragment" />
+    </fragment>
+</navigation>
